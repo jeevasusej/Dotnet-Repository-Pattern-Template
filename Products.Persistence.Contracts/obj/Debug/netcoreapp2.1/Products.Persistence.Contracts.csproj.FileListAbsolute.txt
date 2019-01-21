@@ -1,0 +1,12 @@
+D:\Learning\Products-Github\Products.Persistence.Contracts\bin\Debug\netcoreapp2.1\Products.Persistence.Contracts.deps.json
+D:\Learning\Products-Github\Products.Persistence.Contracts\bin\Debug\netcoreapp2.1\Products.Persistence.Contracts.dll
+D:\Learning\Products-Github\Products.Persistence.Contracts\bin\Debug\netcoreapp2.1\Products.Persistence.Contracts.pdb
+D:\Learning\Products-Github\Products.Persistence.Contracts\bin\Debug\netcoreapp2.1\Products.DomainModel.dll
+D:\Learning\Products-Github\Products.Persistence.Contracts\bin\Debug\netcoreapp2.1\Products.DomainModel.pdb
+D:\Learning\Products-Github\Products.Persistence.Contracts\obj\Debug\netcoreapp2.1\Products.Persistence.Contracts.csprojAssemblyReference.cache
+D:\Learning\Products-Github\Products.Persistence.Contracts\obj\Debug\netcoreapp2.1\Products.Persistence.Contracts.csproj.CoreCompileInputs.cache
+D:\Learning\Products-Github\Products.Persistence.Contracts\obj\Debug\netcoreapp2.1\Products.Persistence.Contracts.AssemblyInfoInputs.cache
+D:\Learning\Products-Github\Products.Persistence.Contracts\obj\Debug\netcoreapp2.1\Products.Persistence.Contracts.AssemblyInfo.cs
+D:\Learning\Products-Github\Products.Persistence.Contracts\obj\Debug\netcoreapp2.1\Products.Persistence.Contracts.csproj.CopyComplete
+D:\Learning\Products-Github\Products.Persistence.Contracts\obj\Debug\netcoreapp2.1\Products.Persistence.Contracts.dll
+D:\Learning\Products-Github\Products.Persistence.Contracts\obj\Debug\netcoreapp2.1\Products.Persistence.Contracts.pdb

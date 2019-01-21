@@ -1,7 +1,17 @@
-<h1>Counter</h1>
+<h1>Products</h1>
 
-<p>This is a simple example of an Angular component.</p>
 
-<p>Current count: <strong>{{ currentCount }}</strong></p>
+<p *ngIf="!products"><em>Loading...</em></p>
 
-<button (click)="incrementCounter()">Increment</button>
+<table class='table' *ngIf="products">
+  <thead>
+    <tr>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of products">
+      <td>{{ data.name }}</td>
+    </tr>
+  </tbody>
+</table>

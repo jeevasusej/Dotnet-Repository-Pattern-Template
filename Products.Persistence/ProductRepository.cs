@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace Products.Persistence
 {
@@ -19,6 +20,15 @@ namespace Products.Persistence
         public void AddProduct(Product product)
         {
             context.Products.Add(product);
+        }
+
+        public void AddProductToUser(long userId, long productId)
+        {
+            context.UserProducts.Add(new UserProduct()
+            {
+                ProductId = productId,
+                UserId = userId
+            });
         }
 
         public bool DeleteProduct(long productId)
@@ -46,7 +56,11 @@ namespace Products.Persistence
 
         public IEnumerable<Product> GetUserProducts(long userId)
         {
-            throw new NotImplementedException();
+            return context.UserProducts
+                  .Include(up => up.Product)
+                  .Where(up => up.UserId == userId)
+                  .Select(p => p.Product)
+                  .AsEnumerable();
         }
     }
 }

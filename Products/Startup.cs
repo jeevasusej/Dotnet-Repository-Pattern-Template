@@ -10,6 +10,7 @@ using Products.BL.Contracts;
 using Products.DomainModel;
 using Products.Persistence.Contracts.UnitOfWork;
 using Products.Persistence.UnitOfWork;
+using AutoMapper;
 
 namespace Products
 {
@@ -27,10 +28,14 @@ namespace Products
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Default")));
-
+            // Inject BL 
             services.AddScoped<IUser, BLUser>();
             services.AddScoped<IProduct, BLProduct>();
+            // Inject unit of work
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+            // inject auto mapper
+            services.AddAutoMapper();
 
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>

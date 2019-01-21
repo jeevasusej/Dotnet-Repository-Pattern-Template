@@ -15,6 +15,7 @@ namespace Products.BL
         {
             this.uow = uow;
         }
+
         public bool DeleteUser(long userId)
         {
             uow.User.DeleteUser(userId);
@@ -41,11 +42,11 @@ namespace Products.BL
             if (user == null)
                 throw new ArgumentException("Invalid user");
 
-            if(string.IsNullOrWhiteSpace(user.Name))
+            if (string.IsNullOrWhiteSpace(user.Name))
                 throw new ArgumentException("Invalid user name");
 
             var _user = uow.User.GetUser(user.Id);
-            if(_user==null)
+            if (_user == null)
             {
                 _user = new User
                 {

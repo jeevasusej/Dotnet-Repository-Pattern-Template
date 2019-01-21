@@ -12,5 +12,6 @@ namespace Products.Persistence.Contracts
         IEnumerable<Product> GetProducts();
         bool DeleteProduct(long productId);
         IEnumerable<Product> GetUserProducts(long userId);
+        void AddProductToUser(long userId, long productId);
     }
 }

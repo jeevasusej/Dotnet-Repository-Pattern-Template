@@ -7,9 +7,10 @@ namespace Products.BL.Contracts
 {
     public interface IProduct
     {
-        void UpsertProduct(Product product);
+        Product UpsertProduct(Product product);
         IEnumerable<Product> GetProducts();
-        void DeleteProduct(long productId);
+        bool DeleteProduct(long productId);
         IEnumerable<Product> GetUserProducts(long userId);
+        bool AddProductToUser(long userId, long productId);
     }
 }

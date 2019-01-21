@@ -41,6 +41,7 @@ namespace Products.Persistence.UnitOfWork
                 return this._Product;
             }
         }
+
         public async Task<int> CompleteAsync()
         {
             return await dbContext.SaveChangesAsync();

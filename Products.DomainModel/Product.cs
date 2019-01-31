@@ -15,6 +15,6 @@ namespace Products.DomainModel
         [StringLength(255)]
         public string Name { get; set; }
 
-        public IList<UserProduct> UserProducts { get; set; }
+        public IList<UserProduct> UserProduct { get; set; }
     }
 }

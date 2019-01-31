@@ -24,7 +24,7 @@ namespace Products.Persistence
 
         public void AddProductToUser(long userId, long productId)
         {
-            context.UserProducts.Add(new UserProduct()
+            context.UserProduct.Add(new UserProduct()
             {
                 ProductId = productId,
                 UserId = userId
@@ -56,7 +56,7 @@ namespace Products.Persistence
 
         public IEnumerable<Product> GetUserProducts(long userId)
         {
-            return context.UserProducts
+            return context.UserProduct
                   .Include(up => up.Product)
                   .Where(up => up.UserId == userId)
                   .Select(p => p.Product)

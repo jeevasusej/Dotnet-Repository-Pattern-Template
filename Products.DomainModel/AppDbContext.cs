@@ -23,16 +23,16 @@ namespace Products.DomainModel
             modelBuilder.Entity<UserProduct>().HasKey(up => new { up.UserId, up.ProductId });
             modelBuilder.Entity<UserProduct>()
                     .HasOne<User>(up => up.User)
-                    .WithMany(u => u.UserProducts)
+                    .WithMany(u => u.UserProduct)
                     .HasForeignKey(up => up.UserId);
 
             modelBuilder.Entity<UserProduct>()
                      .HasOne<Product>(up => up.Product)
-                     .WithMany(p => p.UserProducts)
+                     .WithMany(p => p.UserProduct)
                      .HasForeignKey(up => up.ProductId);
         }
         public DbSet<User> Users { get; set; }
         public DbSet<Product> Products { get; set; }
-        public DbSet<UserProduct> UserProducts { get; set; }
+        public DbSet<UserProduct> UserProduct { get; set; }
     }
 }
